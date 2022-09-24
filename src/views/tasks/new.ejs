@@ -1,10 +1,10 @@
-<%-include('../layouts/header.ejs', { title: 'Tasks' }) %>
-<%-include('../layouts/menu.ejs') %>
+<%-include('../layout/header.ejs', { title: 'Tasks' }) %>
+<%-include('../layout/menu.ejs') %>
 
 <section class="section">
     <div class="container">
         <h1 class="title size-4">Nova Task</h1>
-        <form method="post" action="/checklists/<%= task.checkList._id %>/tasks">
+        <form method="post" action="/checklists/<%= task.checklistId %>/tasks">
             <div class="field">
               <label class="label">Nome</label>
               <div class="control">
@@ -16,10 +16,10 @@
             </div>
         
             <button type="submit" class="button is-success">Salvar</button>
-            <a href="/checklists/<%= task.checkList._id %>" class="button">Cancelar</a>
+            <a href="/checklists/<%= task.checklistId %>" class="button">Cancelar</a>
         </form>
         
     </div>
 </section>
 
-<%-include('../layouts/footer.ejs') %>
+<%-include('../layout/footer.ejs') %>

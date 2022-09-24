@@ -1,12 +1,11 @@
-<%- include('../layout/header.ejs'), {title : Editar lista de tarefas} %>
-
-<%- include('../layout/menu.ejs') %>
+<%-include('../layout/header.ejs', { title: 'To-do List' }) %>
+<%-include('../layout/menu.ejs') %>
 
 <section class="section">
     <div class="container">
-      <h1 class="title size-4">Editar Lista</h1>
-        <%- include.('form', { url:`/checklists${checklist.id}/?_method=put`, checklist : checklist}) %>
+        <h1 class="title size-4">Nova Lista</h1>
+        <%- include('./form', { url: '/checklists?_method=POST', checklist: checklist }) %>
     </div>
-  </section>
+</section>
 
-  <%- include('../layout/footer.ejs') %>
+<%-include('../layout/footer.ejs') %>
